@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.11.8'
+    id 'fabric-loom' version '1.14'
     id 'maven-publish'
 }
 
@@ -14,6 +14,8 @@ repositories {
     maven { name = 'TerraformersMC'; url = 'https://maven.terraformersmc.com/releases/' }
     maven { name = 'Ladysnake'; url = 'https://maven.ladysnake.org/releases' }
     maven { name = 'BlameJared'; url = 'https://maven.blamejared.com/' }
+    maven { name = 'CurseMaven'; url = 'https://cursemaven.com' }
+    maven { name = 'Nucleoid'; url = 'https://maven.nucleoid.xyz' }
 }
 
 dependencies {
@@ -21,8 +23,8 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-    modImplementation "dev.emi:trinkets:${project.trinkets_version}"
-    modImplementation "vazkii.patchouli:Patchouli:${project.patchouli_version}"
+    modImplementation "eu.pb4.polyport:trinkets:${project.trinkets_version}"
+    modImplementation "curse.maven:patchouli-fabric-edition-1664943:${project.patchouli_file}"
 }
 
 java {
